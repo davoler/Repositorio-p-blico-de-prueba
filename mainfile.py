@@ -25,11 +25,23 @@ class Satellite:
         self.name = name
         self.altitude = altitude  # in kilometers
         self.orbit_type = orbit_type
+        
+        # Flight status attributes
         self.status = "Idle"
         self.data_collected = 0 # in GB
 
-"""This part will be related to the OBC Subsystem"""
+    """
+    This part will be related to the OBC Subsystem
+    """
+    def attitude_change(self,omega_x, omega_y, omega_z, angular_speed_x, angular_speed_y, angular_speed_z):
+        """_summary_
 
-def quat_normalize(q):
-    norm = np.linalg.norm(q)
-    return q / norm if norm > 1e-12 else np.array([0.0, 0.0, 0.0, 1.0])
+        Args:
+            omega_x (_type_): _description_
+            omega_y (_type_): _description_
+            omega_z (_type_): _description_
+            angular_speed_x (_type_): _description_
+            angular_speed_y (_type_): _description_
+            angular_speed_z (_type_): _description_
+        """
+        
